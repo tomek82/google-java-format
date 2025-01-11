@@ -9,6 +9,13 @@ class SwitchGuardClause {
 
   {
     switch (o) {
+      case String s when s.length() > 5 && s.length() < 10 -> true;
+      default -> false;
+    }
+  }
+
+  {
+    switch (o) {
       case TypeWithVeryVeryVeryVeryLongName variableWithVeryLongName when variableWithVeryLongName
           .methodWithVeryVeryVeryVeryLongNameReturnThis()
           .methodWithVeryVeryVeryVeryLongNameReturnBoolean() -> {
